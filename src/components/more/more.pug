@@ -1,0 +1,8 @@
+mixin More({target='', href='/', title="Plus d'info", icon = 'simpleArrowRight', modifier='more'})
+	-const classComponent = `${prefix}-more`
+	-const classTitleModifier = modifierFn(classComponent, modifier)
+	-const classComponentJs = `${prefixjs}-more`
+	-const classTitleModifierJs = modifierFn(classComponentJs, modifier)
+	a(href=href target=target title=title class=`${classComponent}${classTitleModifier} ${classComponentJs}${classTitleModifierJs}`)
+		+Icon({id:icon})
+		span(class=`${classComponent}__text`) #{title}

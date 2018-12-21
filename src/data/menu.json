@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "label": "Axa Web Center",
+      "href": "https://www.axawebcenter.fr/",
+      "title": "Axa Web Center",
+      "target": "_blank"
+    },
+    {
+      "label": "Github",
+      "href": "https://github.com/AxaGuilDEv",
+      "title": "Axa Open Source",
+      "target": "_blank"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.axawebcenter.fr/",
+      "title": "Blog Axa Web Center",
+      "target": "_blank"
+    }
+  ]
+}

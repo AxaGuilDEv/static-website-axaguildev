@@ -1,0 +1,4 @@
+mixin menuitem({active, href, label, title})
+	li(class=`${prefix}-menu__item${active !== '' ? ` ${prefix}-menu__item--active` : ''}`)
+		a(href=href title=title class=`${prefix}-menu__item-link`)
+			|	#{label}

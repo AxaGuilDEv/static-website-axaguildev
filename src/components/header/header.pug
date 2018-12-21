@@ -1,0 +1,9 @@
+header(class=`${prefix}-header`)
+	div(class=`${prefix}-header__name`)
+		a(class=`${prefix}-header__name-link` href=basedir title="Retour à l'accueil")
+			+Img({img:"axa.svg", alt:"Retour à l'accueil", modifier: "header"})
+		+Title({level: "h1", modifier:"header"})
+			| AxaGuilDev
+			small(class=`${prefix}-title__small`)
+				| Github
+	+menu("/")

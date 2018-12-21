@@ -1,0 +1,3 @@
+mixin Slide(item = {})
+  li(class=`${prefix}-slider__list-item ${prefixjs}-slider__list-item` data-repo=item.name data-id=item.id)
+    +Repo({ title:item.name, homepage: item.homepage, stars:item.stargazers_count, version:"1.0.0", desc:item.description})

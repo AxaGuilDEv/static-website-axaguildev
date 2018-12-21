@@ -1,0 +1,140 @@
+.#{$prefix} {
+  &-slider {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto 20px;
+    user-select: none;
+    &__frame {
+      position: relative;
+      width: 80vw;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+    }
+    &__list {
+      display: inline-flex;
+      margin-bottom: 0;
+      &-item {
+        position: relative;
+        display: inline-block;
+        width: 80vw;
+        color: $white;
+        margin-right: 10px;
+        white-space: normal;
+        &:last-child {
+          margin-right: 0;
+        }
+        &--synchronize:after {
+          content: 'Synchronisation...';
+          @include centerer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          line-height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+          color: $white;
+          text-align: center;
+        }
+      }
+    }
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      display: block;
+      cursor: pointer;
+      background: $color-axa;
+      color: $white;
+      padding: 0.2rem;
+      &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      svg {
+        width: 25px;
+        transition: 0.4s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__prev {
+      left: 0;
+    }
+    &__next {
+      right: 0;
+    }
+  }
+  &-list {
+    font-size: 0.6rem;
+    padding: 0 0 0 0.7rem;
+    text-indent: 0;
+    margin: 1rem 0;
+    &__item {
+      margin-bottom: 0.3em;
+    }
+    &__link {
+      color: $burnt-sierra;
+      margin-right: 0.5em;
+      text-decoration: none;
+      text-shadow: none;
+      &:visited {
+        color: $burnt-sierra;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .#{$prefix} {
+    &-slider {
+      width: 90vw;
+      &__frame {
+        width: 80vw;
+      }
+      &__list {
+        display: inline-block;
+        &-item {
+          width: 80vw;
+          height: 80vh;
+        }
+      }
+      &__prev,
+      &__next {
+        padding: 0.5rem 1rem;
+      }
+    }
+    &-list {
+      font-size: 0.8rem;
+      padding: 0 0 0 0.5rem;
+      &__item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*
+@media screen and (min-width: 980px ) {
+  .#{$prefix} {
+    &-slider{
+      width: 90vw;
+      background: rgba(0,210,130,.5);
+      &__frame{
+        width: 80vw;
+        background: rgba(234, 1, 255, 0.5);
+      }
+      &__list{
+        &-item{
+          width: 80vw;
+        }
+      }
+    }
+  }
+} */

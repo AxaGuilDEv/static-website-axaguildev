@@ -1,0 +1,7 @@
+mixin Title({level = 'h1', modifier = ''})
+	-const classComponent = `${prefix}-title`
+	-const classTitleModifier = modifierFn(classComponent, modifier)
+	-const classComponentJs = `${prefixjs}-title`
+	-const classTitleModifierJs = modifierFn(classComponentJs, modifier)
+	#{level}(class=`${classComponent}${classTitleModifier} ${classComponentJs}${classTitleModifierJs}`)
+		block

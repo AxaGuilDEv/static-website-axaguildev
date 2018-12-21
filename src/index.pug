@@ -1,0 +1,12 @@
+extends ./commons/layout
+block meta
+	-const { metatitle, metadescription, metakeywords } = home
+	-var metaTitle = metatitle
+	-var metaDescription = metadescription
+	-var metaKeywords = metakeywords
+block content
+	+Slider({items:repos})
+	+Contributors({})
+block template
+	+contributorTmpl()
+	+slideTmpl()

@@ -1,0 +1,46 @@
+block vars	
+	-const id = "home"
+	-const {modifierFn} = functions
+	-const {title, author, geography, copyright, email, description, keywords, lang, avatar} = general
+	-const {prefixjs, prefix, baseurl, pathImg, pathFavicons} = base
+	-const {items} = menu
+
+include ../components/menu/menu
+include ../components/icon/icon
+include ../components/title/title
+include ../components/img/img
+include ../components/more/more
+include ../components/repo/repo
+include ../components/slider/slider
+include ../components/slider/slide
+include ../components/slider/slideTmpl
+include ../components/contributors/contributors
+include ../components/contributors/contributorTmpl
+
+doctype html
+html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
+	head
+		link(rel="canonical" href=baseurl)
+		include ./includes/meta
+		block meta
+		include ./includes/favicon.pug
+		meta(name="description" content=metaDescription || description)
+		meta(name="keywords" content=metaKeywords || keywords)
+		title
+			=metaTitle || title
+		//[if lte IE 8]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet")
+		link(rel="shortcut icon" href="img/favicon.ico")
+		link(href=`${basedir}bundle.css` rel="stylesheet" type="text/css")
+		style
+			block style		
+	body(id=`${prefix}-${id}-body` class=`${prefix}-body`)
+		div(class=`${prefix}-container`)
+			include ../components/header/header				
+			block menu
+			block content
+			include ../components/footer/footer
+		include ../assets/sprite/sprite.svg
+		script(src=`${basedir}bundle.js`)
+		block scriptPage
+		block template

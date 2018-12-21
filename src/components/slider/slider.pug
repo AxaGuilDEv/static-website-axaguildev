@@ -1,0 +1,11 @@
+mixin Slider({modifier='', items= []})
+	div.js_slider(class=`${prefix}-slider ${prefixjs}-slider`)
+		div.js_frame(class=`${prefix}-slider__frame ${prefixjs}-slider__frame`)
+			ul.js_slides(class=`${prefix}-slider__list ${prefixjs}-slider__list`)
+				each item in items
+					+Slide(item)
+		span.js_prev(class=`${prefix}-slider__prev ${prefixjs}-slider__prev`)
+			+Icon({id:'simpleArrowLeft'})
+		span.js_next(class=`${prefix}-slider__next ${prefixjs}-slider__next`)
+			+Icon({id:'simpleArrowRight'})
+

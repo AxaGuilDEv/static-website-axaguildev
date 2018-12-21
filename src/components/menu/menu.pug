@@ -1,0 +1,8 @@
+include ./menuitem
+mixin menu({activeHref, modifier=""})
+	nav(class=`${prefix}-menu${modifier !== "" ? ` ${prefix}-menu--${modifier}` : ""}`)
+		+Icon({id: 'menu-button', modifier: 'menu-button'})
+		+Icon({id: 'close', modifier: 'close'})
+		ul(class=`${prefix}-menu__list`)
+			each item in items
+				+menuitem({active: activeHref===item.href, href: item.href, title: item.title, label: item.label})

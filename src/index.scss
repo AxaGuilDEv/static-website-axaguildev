@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* Import Normalize ******************************/
+
+@import 'normalize-scss/sass/normalize/import-now';
+
+/* Import components *****************************/
+
+/* Commons */
+
+@import './commons/scss/mixins';
+@import './commons/scss/variables';
+@import './commons/scss/main.scss';
+
+/* Atomes */
+
+@import './components/title/title';
+@import './components/icon/icon';
+@import './components/more/more';
+
+/* Molecules */
+
+@import './components/header/header';
+@import './components/footer/footer';
+@import './components/menu/menu';
+@import './components/repo/repo';
+
+/* Organism */
+
+@import './components/slider/slider';
+@import './components/contributors/contributors';
