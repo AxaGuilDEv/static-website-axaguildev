@@ -56,7 +56,7 @@ const addDemosLinkForToolkitReact = (tags, cloneTemplate) => {
     const itemLinkDemo = createLink(
       'Demo',
       'See Demo',
-      `https://axaguildev.github.io/react-toolkit/${tagName}/demo/index.html`,
+      `https://axaguildev.github.io/react-toolkit/${tagName}/demo`,
     );
     const itemListContent = document.createTextNode(`[${tag.name}]`);
     itemList.appendChild(itemLinkDesignSystem);
